@@ -2,10 +2,11 @@
 <html>
 <head>
   <title>movies!</title>
-  <h1> MY PROFILE </h1>
 </head>
 <body>
+	<h1> <%= email %>: PROFILE </h1>
 
+	<a href='/logout'>LOGOUT</a>
     <form action="/search"  method="GET">
 		<input type="text" name="movieTitle">
 		<button>search new</button>

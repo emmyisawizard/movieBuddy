@@ -62,9 +62,10 @@ app.get("/", function (req, res) {
 
 // my profile page 
 app.get("/profile", function (req, res) {
+  console.log('USER: ',req.user.email);
   var movie = req.body.movieTitle;
 
-  res.render("sites/profile");
+  res.render("sites/profile", {email: req.user.email});
 });
 
 app.get("/sign_up", function (req, res){
@@ -114,6 +115,12 @@ app.post("/profile", function (req, res) {
 
 });
 
+app.get("/logout", function (req, res) {
+  // log out
+  req.logout();
+  res.redirect("/");
+});
+
 // app.post('/login', function(req, res) {
 //   console.log(req.body);
 
@@ -129,8 +136,26 @@ app.post('/login', passport.authenticate('local', {
   failureRedirect: '/login'
 }));
 
+app.post('/movies/add', function (req,res) {
+  //console.log(req.body);
+  var movie = req.body;
+  //console.log('\n\n\n\n\n\n\n\n\n\n\n\nUSER ID', req.user.id)
+  // { movieTitle: 'Batman Begins', movie_imdbId: 'tt0372784' }
+    //   title: DataTypes.STRING,
+    // imdbID: DataTypes.STRING,
+    // userID: DataTypes.INTEGER
+  db.movies.create({title: movie.movieTitle,
+                    imdbID: movie.movie_imdbId,
+                    userID: req.user.id})
+                  .then(function(movie) {
+                    res.redirect('/profile');
+                    //res.redirect('/profile');
+                  });
+  //res.redirect('/success');
+});
+
 app.get('/success', function(req,res) {
-  res.send('logged in');
+  res.send('movie added');
 });
 
 app.listen(3000, function () {
