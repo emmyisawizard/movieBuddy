@@ -1,0 +1,183 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save', 'request' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json movieBuddy@1.0.0 No description
+5 warn package.json movieBuddy@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'request', null ]
+8 verbose cache add name=undefined spec="request" args=["request",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'request',
+9 verbose parsed url   path: 'request',
+9 verbose parsed url   href: 'request' }
+10 silly lockFile 088e29b0-request request
+11 verbose lock request /Users/Emmy/.npm/088e29b0-request.lock
+12 silly lockFile 088e29b0-request request
+13 silly lockFile 088e29b0-request request
+14 verbose addNamed [ 'request', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 9d461bcf-request request@
+17 verbose lock request@ /Users/Emmy/.npm/9d461bcf-request.lock
+18 silly addNameRange { name: 'request', range: '*', hasData: false }
+19 verbose request where is /request
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id d68080c344a2fa4b
+22 verbose url raw /request
+23 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+24 verbose url resolved https://registry.npmjs.org/request
+25 verbose request where is https://registry.npmjs.org/request
+26 info trying registry request attempt 1 at 17:49:57
+27 verbose etag "AZGJDFY3KSESMUXYAENEPR4PP"
+28 http GET https://registry.npmjs.org/request
+29 http 200 https://registry.npmjs.org/request
+30 silly registry.get cb [ 200,
+30 silly registry.get   { date: 'Tue, 16 Dec 2014 01:49:58 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     etag: '"D12CH2K90S1P4QPIRIQQRBVZQ"',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     'content-length': '132981',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '28',
+30 silly registry.get     'x-served-by': 'cache-sjc3125-SJC',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1418694598.016435,VS0,VE0',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly addNameRange number 2 { name: 'request', range: '*', hasData: true }
+32 silly addNameRange versions [ 'request',
+32 silly addNameRange   [ '0.10.0',
+32 silly addNameRange     '0.8.3',
+32 silly addNameRange     '0.9.0',
+32 silly addNameRange     '0.9.1',
+32 silly addNameRange     '0.9.5',
+32 silly addNameRange     '1.0.0',
+32 silly addNameRange     '1.1.0',
+32 silly addNameRange     '1.1.1',
+32 silly addNameRange     '1.2.0',
+32 silly addNameRange     '1.9.0',
+32 silly addNameRange     '1.9.1',
+32 silly addNameRange     '1.9.2',
+32 silly addNameRange     '1.9.3',
+32 silly addNameRange     '1.9.5',
+32 silly addNameRange     '1.9.7',
+32 silly addNameRange     '1.9.8',
+32 silly addNameRange     '1.9.9',
+32 silly addNameRange     '2.0.0',
+32 silly addNameRange     '2.0.1',
+32 silly addNameRange     '2.0.2',
+32 silly addNameRange     '2.0.3',
+32 silly addNameRange     '2.0.4',
+32 silly addNameRange     '2.0.5',
+32 silly addNameRange     '2.1.0',
+32 silly addNameRange     '2.1.1',
+32 silly addNameRange     '2.2.0',
+32 silly addNameRange     '2.2.5',
+32 silly addNameRange     '2.2.6',
+32 silly addNameRange     '2.2.9',
+32 silly addNameRange     '2.9.0',
+32 silly addNameRange     '2.9.1',
+32 silly addNameRange     '2.9.2',
+32 silly addNameRange     '2.9.3',
+32 silly addNameRange     '2.9.100',
+32 silly addNameRange     '2.9.150',
+32 silly addNameRange     '2.9.151',
+32 silly addNameRange     '2.9.152',
+32 silly addNameRange     '2.9.153',
+32 silly addNameRange     '2.9.200',
+32 silly addNameRange     '2.9.201',
+32 silly addNameRange     '2.9.202',
+32 silly addNameRange     '2.9.203',
+32 silly addNameRange     '2.10.0',
+32 silly addNameRange     '2.11.0',
+32 silly addNameRange     '2.11.1',
+32 silly addNameRange     '2.11.2',
+32 silly addNameRange     '2.11.3',
+32 silly addNameRange     '2.11.4',
+32 silly addNameRange     '2.12.0',
+32 silly addNameRange     '2.14.0',
+32 silly addNameRange     '2.16.0',
+32 silly addNameRange     '2.16.2',
+32 silly addNameRange     '2.16.4',
+32 silly addNameRange     '2.16.6',
+32 silly addNameRange     '2.18.0',
+32 silly addNameRange     '2.19.0',
+32 silly addNameRange     '2.20.0',
+32 silly addNameRange     '2.21.0',
+32 silly addNameRange     '2.22.0',
+32 silly addNameRange     '2.23.0',
+32 silly addNameRange     '2.24.0',
+32 silly addNameRange     '2.25.0',
+32 silly addNameRange     '2.26.0',
+32 silly addNameRange     '2.27.0',
+32 silly addNameRange     '2.28.0',
+32 silly addNameRange     '2.29.0',
+32 silly addNameRange     '2.30.0',
+32 silly addNameRange     '2.31.0',
+32 silly addNameRange     '2.32.0',
+32 silly addNameRange     '2.33.0',
+32 silly addNameRange     '2.34.0',
+32 silly addNameRange     '2.35.0',
+32 silly addNameRange     '2.36.0',
+32 silly addNameRange     '2.37.0',
+32 silly addNameRange     '2.38.0',
+32 silly addNameRange     '2.39.0',
+32 silly addNameRange     '2.40.0',
+32 silly addNameRange     '2.41.0',
+32 silly addNameRange     '2.42.0',
+32 silly addNameRange     '2.43.0',
+32 silly addNameRange     '2.44.0',
+32 silly addNameRange     '2.45.0',
+32 silly addNameRange     '2.46.0',
+32 silly addNameRange     '2.47.0',
+32 silly addNameRange     '2.48.0',
+32 silly addNameRange     '2.49.0',
+32 silly addNameRange     '2.50.0',
+32 silly addNameRange     '2.51.0' ] ]
+33 verbose addNamed [ 'request', '2.51.0' ]
+34 verbose addNamed [ '2.51.0', '2.51.0' ]
+35 silly lockFile 85707acc-request-2-51-0 request@2.51.0
+36 verbose lock request@2.51.0 /Users/Emmy/.npm/85707acc-request-2-51-0.lock
+37 silly lockFile fcfd6969-s-org-request-request-2-51-0-tgz https://registry.npmjs.org/request/-/request-2.51.0.tgz
+38 verbose lock https://registry.npmjs.org/request/-/request-2.51.0.tgz /Users/Emmy/.npm/fcfd6969-s-org-request-request-2-51-0-tgz.lock
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.51.0.tgz',
+39 verbose addRemoteTarball   '35d00bbecc012e55f907b1bd9e0dbd577bfef26e' ]
+40 info retry fetch attempt 1 at 17:49:57
+41 verbose fetch to= /var/folders/dv/0rxx1vkj71n3675ngfm9nlz00000gn/T/npm-26060-p4lY5Qge/registry.npmjs.org/request/-/request-2.51.0.tgz
+42 http GET https://registry.npmjs.org/request/-/request-2.51.0.tgz
+43 http 200 https://registry.npmjs.org/request/-/request-2.51.0.tgz
+44 silly lockFile fcfd6969-s-org-request-request-2-51-0-tgz https://registry.npmjs.org/request/-/request-2.51.0.tgz
+45 silly lockFile fcfd6969-s-org-request-request-2-51-0-tgz https://registry.npmjs.org/request/-/request-2.51.0.tgz
+46 silly lockFile 85707acc-request-2-51-0 request@2.51.0
+47 silly lockFile 85707acc-request-2-51-0 request@2.51.0
+48 silly lockFile 9d461bcf-request request@
+49 silly lockFile 9d461bcf-request request@
+50 error Error: EACCES, mkdir '/Users/Emmy/.npm/request/2.51.0'
+50 error  { [Error: EACCES, mkdir '/Users/Emmy/.npm/request/2.51.0']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/Users/Emmy/.npm/request/2.51.0',
+50 error   parent: 'movieBuddy' }
+51 error Please try running this command again as root/Administrator.
+52 error System Darwin 13.4.0
+53 error command "node" "/usr/local/bin/npm" "install" "--save" "request"
+54 error cwd /Users/Emmy/movieBuddy
+55 error node -v v0.10.33
+56 error npm -v 1.4.28
+57 error path /Users/Emmy/.npm/request/2.51.0
+58 error code EACCES
+59 error errno 3
+60 error stack Error: EACCES, mkdir '/Users/Emmy/.npm/request/2.51.0'
+61 verbose exit [ 3, true ]

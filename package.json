@@ -1,0 +1,32 @@
+{
+  "name": "movieBuddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emmyisawizard/movieBuddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmyisawizard/movieBuddy/issues"
+  },
+  "homepage": "https://github.com/emmyisawizard/movieBuddy",
+  "dependencies": {
+    "bcrypt": "^0.8.0",
+    "body-parser": "^1.10.0",
+    "cookie-session": "^1.1.0",
+    "cookie-sessions": "0.0.2",
+    "ejs": "^1.0.0",
+    "express": "^4.10.6",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "pg": "^4.1.1",
+    "request": "^2.51.0",
+    "sequelize": "^2.0.0-rc3"
+  }
+}

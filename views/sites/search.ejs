@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>movies!</title>
+</head>
+<body>
+  <h1> New Movies </h1>
+
+    <form action="/search"  method="GET">
+		<input type="text" name="movieTitle">
+		<button>search new</button>
+	</form>
+
+<% movieList.forEach(function(element, index, array) { %>
+
+	<div>
+	<p><%  console.log(element); %></p>
+	<h1><%= element.Title %></h1>
+	<p><%= element.Year %></p>
+	<p><%= element.imdbID %></p>
+	<p><%= element.Type %></p>
+
+
+	       
+    	<form action="/profile"  method="POST">
+			<input type="text" name="movieTitle" value="<%=element.Title%>">
+			<input type="text" name="movie_imdbId" value="<%=element.imdbID%>">
+			<button>add</button>
+
+	    </form>
+		
+	</div>
+<% }) %>
+	
+</body>
+</html>
