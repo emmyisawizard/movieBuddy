@@ -14,7 +14,7 @@ module.exports = {
       imdbID: {
         type: DataTypes.STRING
       },
-      userID: {
+      userId: {
         type: DataTypes.INTEGER
       },
       createdAt: {

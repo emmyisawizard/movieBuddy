@@ -1,13 +1,13 @@
 var express = require("express");
- var bodyParser = require("body-parser");
- var request = require('request');
- var app = express();
- var db = require('./models/');
+var bodyParser = require("body-parser");
+var request = require('request');
+var app = express();
+var db = require('./models/');
 var passport = require("passport");
 var session = require("cookie-session");
 
 var movies =[];
-
+//dont know why we need this (ask mike)
 app.use(session( {
   secret: 'thisismysecretkey',
   name: 'chocolate chip',
@@ -66,6 +66,7 @@ app.get("/profile", function (req, res) {
   var movie = req.body.movieTitle;
 
   res.render("sites/profile", {email: req.user.email});
+  //res.render(movieList)
 });
 
 app.get("/sign_up", function (req, res){
@@ -93,7 +94,7 @@ app.get("/search", function (req, res) {
 	}
 });
 
-
+//this is creating a new user in my database 
 app.post("/users", function (req,res){
   console.log(req.body);
   db.users.createSecure(req.body.user.email, req.body.user.password,
@@ -109,12 +110,15 @@ app.post("/profile", function (req, res) {
 
   //var movie = req.body.movieTitle;
   console.log(req.body);
-  db.movies.create({title: req.body.movieTitle, imdbID: req.body.movie_imdbId}).then(function(movie) {
+  db.movies.create({title: req.body.movieTitle, imdbID: req.body.movie_imdbId})
+  .then(function(movie) {
   	res.redirect('sites/profile');
   })
 
 });
 
+
+//allows the user to log out 
 app.get("/logout", function (req, res) {
   // log out
   req.logout();
@@ -146,7 +150,7 @@ app.post('/movies/add', function (req,res) {
     // userID: DataTypes.INTEGER
   db.movies.create({title: movie.movieTitle,
                     imdbID: movie.movie_imdbId,
-                    userID: req.user.id})
+                    userId: req.user.id})
                   .then(function(movie) {
                     res.redirect('/profile');
                     //res.redirect('/profile');
