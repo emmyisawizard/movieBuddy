@@ -11,6 +11,12 @@
 		<input type="text" name="movieTitle">
 		<button>search new</button>
 	</form>
+
+	<% moviesList.forEach(function(movie){ %>
+		<div>
+		<%= movie.title %>
+		</div>
+		<% }) %>
 	
 </body>
 </html>

@@ -68,7 +68,8 @@ app.get("/profile", function (req, res) {
   db.movies.findAll({where: {userId: id}})
             .then(function(m) {
               console.log(m);
-              res.render("sites/profile", {email: req.user.email});
+              console.log("LENGTH", m.length);
+              res.render("sites/profile", {email: req.user.email, moviesList: m});
             });
   //res.render(movieList)
 });
