@@ -64,8 +64,12 @@ app.get("/", function (req, res) {
 app.get("/profile", function (req, res) {
   console.log('USER: ',req.user.email);
   var movie = req.body.movieTitle;
-
-  res.render("sites/profile", {email: req.user.email});
+  var id = req.user.id;
+  db.movies.findAll({where: {userId: id}})
+            .then(function(m) {
+              console.log(m);
+              res.render("sites/profile", {email: req.user.email});
+            });
   //res.render(movieList)
 });
 
